@@ -1,0 +1,12 @@
+print("hey! What is your name")
+name = input()
+print("Hello Mr/Ms",name)
+print("Hows is weather outside write 1 for rain and 2 for summer")
+weather = int(input())
+
+
+
+if weather ==1:
+    print("there is rain")
+else:
+    print("it is summer")
