@@ -1,0 +1,22 @@
+print("What you want to perform")
+print("press 1 for addition, 2 for sub, 3 for mul, 4 for div")
+number = int(input())
+print("Enter your first number")
+
+Firstno = int(input())
+print("Enter your scond number")
+Secondno =int(input())
+
+addition = Firstno + Secondno
+sub = Firstno - Secondno
+Mult =Firstno * Secondno
+Div = Firstno // Secondno
+
+if number == 1:
+    print(addition)
+elif number == 2:
+    print(sub)
+elif number ==3:
+    print(Mult)
+else:
+    print(Div)
