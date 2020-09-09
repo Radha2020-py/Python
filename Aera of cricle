@@ -1,0 +1,9 @@
+#Python program to find the area cricle PI*r*r
+
+print("Enter the  radius of a circle")
+radius = int(input())
+PI = 3.14
+
+radius = PI*radius*radius
+
+print("the radius of a cricle", radius)
