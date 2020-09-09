@@ -1,0 +1,9 @@
+print("Please enter the Height")
+Height = int(input())
+print("Please enter the Base")
+Base = int(input())
+
+
+area = (Height*Base)//2
+
+print("The area of traingle is", area)
