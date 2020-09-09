@@ -1,0 +1,8 @@
+
+print("Enter the number to convert the kilo to mtr")
+Kilo = int(input())
+
+Mtr = Kilo*1000
+
+
+print(Mtr)
