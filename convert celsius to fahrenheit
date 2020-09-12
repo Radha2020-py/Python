@@ -1,0 +1,7 @@
+print( "enter the temp in the degree")
+
+degree = float(input())
+
+result= (degree *9/5)+32
+
+print(result)
