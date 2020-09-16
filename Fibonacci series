@@ -1,0 +1,9 @@
+print("Enter the a",)
+a= int(input())
+print("Enter the b")
+b= int(input())
+
+while a<10:
+    a,b = b, a+b
+    print("The Fibonacci series is", a)
+ 
