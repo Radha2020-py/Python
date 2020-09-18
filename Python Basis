@@ -1,0 +1,19 @@
+Python Basis
+
+Data Structures in Python
+1.List
+2.Tuple
+3.Dictionaries
+4.Set
+
+List : lists are a mutable type, i.e. it is possible to change their content
+ex: List [ 1,2,3,4,5,6]
+
+Tuple: Tuples are immutable
+Ex: tuple = 'Radha','Srikath','Madhavi'
+
+Dictionaries : are mutable
+dic ={"a":"radha","b":"srikath", "c":"Madhavi"}
+
+set :a term in mathematics for a sequence consisting of distinct language is also extended in its language by Python and can easily be made using set().
+
