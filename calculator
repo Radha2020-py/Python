@@ -1,39 +1,101 @@
-def add(num1, num2):
-    return num1 + num2
+from tkinter import *
+def click( event ):
+    global scvalue
+    text = event. widget. cget("text")
+    if text=="=":
+      if scvalue.get().isdigit():
+              value=int(scvalue.get())
+      else :
+         try:
+            value = eval(screen.get())
+         except Expection as e:
+         	print(e)
+         	value="error"
+      scvalue.set(value)
+      screen.update()
+    elif text=="c":
+       scvalue. set(" ")
+       screen.update()
+    else :
+       scvalue.set(scvalue.get() + text)
+       screen.update()
 
 
-def sub(num1, num2):
-    return num1 - num2
 
+    
 
-def mul(num1, num2):
-    return num1 * num2
+root=Tk()
+root. geometry("455x564")
+root.configure(background="yellow")
+scvalue=StringVar()
+scvalue.set("")
+screen=Entry(root,textvar=scvalue,font="lucinda 40 bold")
+screen.pack(fill=X,padx=34)
+f= Frame(root, bg="grey")
+b=Button(f,text="9",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click) 
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="8",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT,padx=25,pady=22)
+b=Button(f,text="7",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT,padx=25,pady=22)
+f. pack()
+f= Frame(root, bg="grey")
+b=Button(f,text="6",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="5",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="4",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+f. pack()
+f= Frame(root, bg="grey")
+b=Button(f,text="3",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="2",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="1",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+f. pack()
+f= Frame(root, bg="grey")
+b=Button(f,text="+",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="0",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="-",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+f.pack()
+f= Frame(root, bg="grey")
+b=Button(f,text="*",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="/",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="=",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+f. pack()
+f= Frame(root, bg="grey")
+b=Button(f,text="c",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text=".",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+b=Button(f,text="%",padx=25,pady=22,font="lucinda 19 bold")
+b.bind("<Button-1>",click)
+b. pack(side=LEFT, padx=25,pady=22)
+f. pack()
 
-
-def div(num1, num2):
-    return num1 / num2
-
-
-print("Select operation.")
-print("1.Add")
-print("2.Sub")
-print("3.Mul")
-print("4.Div")
-
-choice = input("Enter choice(1/2/3/4):")
-print("Enter your number num1")
-num1 = int(input())
-print("Enter your number num2")
-num2 = int(input())
-
-if choice == '1':
-    print(add(num1,num2))
-elif choice == '2':
-    print(sub(num1, num2))
-elif choice == '3':
-    print(mul(num1, num2))
-elif choice == '4':
-    print(div(num1, num2))
-
-else:
-    print('end the program')
+root. mainloop()
